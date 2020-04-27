@@ -1,0 +1,25 @@
+{
+  "name": "myopenlib",
+  "version": "1.0.0",
+  "description": "In velit esse aut optio. Accusamus debitis velit assumenda. Quos ea labore veniam error eaque voluptatem est. Officiis consequatur qui omnis. Aut temporibus veritatis et. Voluptatem aut expedita ipsam omnis sunt.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com//CedricEYK/MyOpenLib.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.0.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
