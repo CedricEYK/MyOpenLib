@@ -5,7 +5,12 @@
 * License: https://bootstrapmade.com/license/
 */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
 
@@ -107,9 +112,11 @@ a:hover {
   font-size: 24px;
 }
 
-.scrolltop:hover, .scrolltop:active, .scrolltop:focus {
+.scrolltop:hover,
+.scrolltop:active,
+.scrolltop:focus {
   color: #fff !important;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 /*--------------------------------------------------------------
@@ -133,7 +140,7 @@ a:hover {
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: #fff
+  color: #fff;
 }
 
 #header #logo h1 a,
@@ -425,7 +432,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .hero:after {
-  content: '';
+  content: "";
   z-index: 0;
   position: absolute;
   background: rgba(0, 0, 0, 0.65);
@@ -450,7 +457,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .hero-brand:hover {
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .tagline {
@@ -534,7 +541,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .collection-col .collection-icon .clctnIcon {
-  color: #fff
+  color: #fff;
 }
 
 .collection-col h3 {
@@ -545,6 +552,22 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #999;
+}
+
+/* ==================================================
+  collection Styling
+  ================================================== */
+.card {
+  border: outset;
+}
+
+.card-body .btn {
+  margin-left: 48px;
+}
+
+.col {
+  max-width: 33%;
+  padding-bottom: 31px;
 }
 
 /* ==================================================
@@ -566,7 +589,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .cta p {
   margin-bottom: 0;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .cta .btn-ghost {
@@ -644,12 +667,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   animation: animate-loading 1s linear infinite;
 }
 
-#contact .php-email-form input, #contact .php-email-form textarea {
+#contact .php-email-form input,
+#contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
 }
 
-#contact .php-email-form input::focus, #contact .php-email-form textarea::focus {
+#contact .php-email-form input::focus,
+#contact .php-email-form textarea::focus {
   background-color: #ff7f00;
 }
 
@@ -689,7 +714,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 .site-footer {
   background-color: #111;
   padding: 0;
-  
 }
 
 .site-footer h2,
@@ -698,7 +722,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .site-footer p {
-  opacity: .75;
+  opacity: 0.75;
   line-height: 2.0925;
 }
 
@@ -709,7 +733,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .site-footer .social-nav a {
   color: #fff;
-  opacity: .25;
+  opacity: 0.25;
 }
 
 .site-footer .social-nav a:hover {

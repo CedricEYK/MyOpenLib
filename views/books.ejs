@@ -1,0 +1,51 @@
+<!-- ======= Head ======= -->
+<%- include('../views/includes/head.ejs') %>
+<link href="/css/footerStyle.css" rel="stylesheet">
+</head>
+<!-- End Head -->
+
+<body>
+  <!-- ======= navHeader ======= -->
+  <%- include('../views/includes/navHeader.ejs') %>
+ <!-- End navHeader -->
+
+  <main id="main">
+    <h1>Books from a api subject:</h1>
+    <div>
+        <form class="" method="GET" action="/bookResults">
+            <input name="search" type="text" placeholder="search by subject">
+            <input type="submit">
+        </form>
+    </div>
+    <!-- section to show books -->
+    <section>
+     <div class="container">
+        <div class="row align-items-center">
+            <% books.forEach(function(book) {%>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src=<%= "https://covers.openlibrary.org/w/id/" + book.cover_id + ".jpg" %>
+                alt="Card image cap"/>
+                <div class="card-body">
+                  <h5 class="card-title"><%= book.title  %></h5>
+                  <h6 class="card-subtitle">By <% book.authors.forEach(function(author) { %>
+                    <%= author + ', ' %>
+                        <% }) %> </h6>
+                  <p class="card-text"><% book.description %></p>
+                  <a href=<%= "http://www.archive.org/stream/" + book.identifier %> class="btn btn-primary">Read</a>
+                </div>
+              </div>
+            </div>
+            <% }) %>
+        </div>
+     </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <%- include('../views/includes/footer.ejs') %>
+  <!-- End Footer -->
+
+<!-- ======= endDocument ======= -->
+<%- include('../views/includes/end.ejs') %>
+<!-- End  -->

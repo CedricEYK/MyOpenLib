@@ -9,10 +9,34 @@
   <%- include('../views/includes/navHeader.ejs') %>
  <!-- End navHeader -->
 
-  <main id="main">
-    <h1>Page to show collections:</h1>
-    <h2><%= collectionName %></h2>
-  </main><!-- End #main -->
+<main id="main">
+  <h1>Page to show collection:</h1>
+  
+  <!-- section to show books -->
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <% books.forEach(function(book) {%>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=<%= "https://covers.openlibrary.org/w/id/" + book.cover_id + ".jpg" %>
+              alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title"><%= book.title  %></h5>
+              <h6 class="card-subtitle">By <% book.authors.forEach(function(author) { %>
+                <%= author + ', ' %>
+                <% }) %> </h6>
+              <p class="card-text"><% book.description %></p>
+              <a href=<%= "http://www.archive.org/stream/" + book.identifier %> class="btn btn-primary">Read</a>
+            </div>
+          </div>
+        </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main><!-- End #main -->
+
 
   <!-- ======= Footer ======= -->
   <%- include('../views/includes/footer.ejs') %>
