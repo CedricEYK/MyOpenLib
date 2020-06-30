@@ -13,7 +13,7 @@ exports.getCollection = (req, res, next) => {
   var books = [];
 
   request(url, function (error, response, body) {
-    // var works = [];
+    var works = [];
     if (!error && response.statusCode == 200) {
       console.log("the req.params clcName: " + req.url);
       rawdata = JSON.parse(body);
@@ -48,7 +48,7 @@ exports.getCollection = (req, res, next) => {
 
         works.push(work);
 
-        console.log(works);
+        //console.log(works);
       });
 
       //console.log(works);
