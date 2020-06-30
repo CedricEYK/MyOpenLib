@@ -10,7 +10,7 @@
     <div class="container text-center">
       <div class="row">
         <div class="col-md-12">
-          <a class="hero-brand" href="/" title="Home"><img alt="Bell Logo" src="/img/bookLogo.png"></a>
+          <!-- <a class="hero-brand" href="/" title="Home"><img alt="Bell Logo" src="/img/bookLogo.png"></a> -->
         </div>
       </div>
 
@@ -20,11 +20,12 @@
         </h1>
 
         <p class="tagline">
-          A collection of sources about Africa on many subjects provided by The Internet Archive and Open library
+          A collection of sources about Africa on many subjects provided by The
+          Internet Archive and Open library
         </p>
         <!-- original code <a class="btn btn-full" href="#about">Read this book</a> -->
         <!-- The code for using OpenLibrary Read Api for directly reading a book -->
-        <div class="ol_readapi_book" lccn="03012817" oclc="03544699"><a class="btn btn-full" href="http://www.archive.org/stream/logofcowboynarra00adam">Read this book</a></div>
+        <!-- <div class="ol_readapi_book" lccn="03012817" oclc="03544699"><a class="btn btn-full" href="http://www.archive.org/stream/logofcowboynarra00adam" target="_blank">Read this book</a></div> -->
       </div>
     </div>
 
@@ -32,189 +33,188 @@
 
   <!-- ======= navHeader ======= -->
   <%- include('../views/includes/navHeader.ejs') %>
- <!-- End navHeader -->
+    <!-- End navHeader -->
 
-  <main id="main">
+    <main id="main">
 
-    <!-- ======= About Section ======= -->
-    <section class="about" id="about">
+      <!-- ======= About Section ======= -->
+      <section class="about" id="about">
 
-      <div class="container text-center">
-        <h2>
-          About AfroLib
-        </h2>
+        <div class="container text-center">
+          <h2>
+            About AfroLib
+          </h2>
 
-        <p>
-          Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
-          temporibus an duo.
-        </p>
+          <p>
+            Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit
+            voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per
+            nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat
+            euripidis ea pri, sed veniam tacimates ex. Menandri
+            temporibus an duo.
+          </p>
 
-        <div class="row stats-row">
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">232</span> New Additions
-            </div>
-          </div>
-
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">79</span> Active Readers
-            </div>
-          </div>
-
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">1,463</span> Available Books
-            </div>
-          </div>
-
-          <div class="stats-col text-center col-md-3 col-sm-6">
-            <div class="circle">
-              <span class="stats-no" data-toggle="counter-up">15</span> New Editions
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section><!-- End About Section -->
-
-    <hr>
-
-    <!-- ======= collection Section ======= -->
-    <section class="collection" id="collection">
-
-      <div class="container">
-        <h2 class="text-center">
-          Collection
-        </h2>
-
-        <div class="row">
-          <div class="collection-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="collection-icon">
-                  <a class="clctnIcon" href="/collection/history"><span class="fas fa-monument"></span></a>
-                  <!-- figure out a way to make the urls to the diffrent colletions dynamic by making the second part of the url a req.params or req.querry -->
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  History
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
+          <div class="row stats-row">
+            <div class="stats-col text-center col-md-3 col-sm-6">
+              <div class="circle">
+                <span class="stats-no" data-toggle="counter-up">232</span> New
+                Additions
               </div>
             </div>
-          </div>
 
-          <div class="collection-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="collection-icon">
-                  <a class="clctnIcon" href="/collection/science"><span class="fa fa-flask"></span></a>
-                  
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Science
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
+            <div class="stats-col text-center col-md-3 col-sm-6">
+              <div class="circle">
+                <span class="stats-no" data-toggle="counter-up">79</span> Active
+                Readers
               </div>
             </div>
-          </div>
 
-          <div class="collection-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="collection-icon">
-                  <a class="clctnIcon" href="/collection/art"><span class="fas fa-palette"></span></a>
-                  
-                </div>
+            <div class="stats-col text-center col-md-3 col-sm-6">
+              <div class="circle">
+                <span class="stats-no" data-toggle="counter-up">1,463</span>
+                Available Books
               </div>
+            </div>
 
-              <div>
-                <h3>
-                  Art
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
+            <div class="stats-col text-center col-md-3 col-sm-6">
+              <div class="circle">
+                <span class="stats-no" data-toggle="counter-up">15</span> New
+                Editions
               </div>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="collection-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="collection-icon">
-                  <a class="clctnIcon" href="/collection/religion"><span class="fas fa-place-of-worship"></span></a>
-                  
-                </div>
+      </section><!-- End About Section -->
+
+      <hr>
+
+      <!-- ======= collection Section ======= -->
+      <section class="collection" id="collection">
+
+        <div class="container">
+          <h2 class="text-center">
+            Collection
+          </h2>
+
+          <div class="row">
+
+            <div class="collection-col col-lg-4 col-xs-12">
+              <div class="collection-icon">
+                <a class="clctnIcon" href="/collection/history"><span class="fas
+                    fa-monument"></span></a>
+                <!-- figure out a way to make the urls to the diffrent colletions dynamic by making the second part of the url a req.params or req.querry -->
               </div>
 
               <div>
                 <h3>
-                  Religion
+                  <a href="/collection/history">History</a>
                 </h3>
 
                 <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
+                  Eque feugiat contentiones ei has. Id summo mundi explicari
+                  his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+
+            <div class="collection-col col-lg-4 col-xs-12">
+              <div class="collection-icon">
+                <a class="clctnIcon" href="/collection/science"><span class="fa
+                    fa-flask"></span></a>
+              </div>
+
+              <div>
+                <h3>
+                  <a href="/collection/science">Science</a>
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari
+                  his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+
+            <div class="collection-col col-lg-4 col-xs-12">
+              <div class="collection-icon">
+                <a class="clctnIcon" href="/collection/art"><span class="fas
+                    fa-palette"></span></a>
+              </div>
+
+              <div>
+                <h3>
+                  <a href="/collection/art">Art</a>
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari
+                  his, nec in maiorum scriptorem.
+                </p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row">
+
+            <div class="collection-col col-lg-4 col-xs-12">
+              <div class="collection-icon">
+                <a class="clctnIcon" href="/collection/religion"><span
+                    class="fas fa-place-of-worship"></span></a>
+
+              </div>
+
+              <div>
+                <h3>
+                  <a href="/collection/religion">Religion</a>
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari
+                  his, nec in maiorum scriptorem.
+                </p>
+              </div>
+            </div>
+
+            <div class="collection-col col-lg-4 col-xs-12">
+              <div class="collection-icon">
+                <a class="clctnIcon" href="/collection/culture"><span class="fas
+                    fa-users"></span></a>
+
+              </div>
+
+
+              <div>
+                <h3>
+                  <a href="/collection/culture">Culture</a>
+                </h3>
+
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari
+                  his, nec in maiorum scriptorem.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="collection-col col-lg-4 col-xs-12">
+              <div class="collection-icon">
+                <a class="clctnIcon" href="/collection/geography"><span
+                    class="fas fa-compass"></span></a>
+              </div>
+
+              <div>
+                <h3>
+                  <a href="/collection/geography">Geography</a>
+                </h3>
+                <p>
+                  Eque feugiat contentiones ei has. Id summo mundi explicari
+                  his, nec in maiorum scriptorem.
                 </p>
               </div>
             </div>
           </div>
 
-          <div class="collection-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="collection-icon">
-                  <a class="clctnIcon" href="/collection/culture"><span class="fas fa-users"></span></a>
-                  
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Culture
-                </h3>
-
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="collection-col col-lg-4 col-xs-12">
-            <div class="card card-block text-center">
-              <div>
-                <div class="collection-icon">
-                  <a class="clctnIcon" href="/collection/geography"><span class="fas fa-compass"></span></a>
-                  
-                </div>
-              </div>
-
-              <div>
-                <h3>
-                  Geography
-                </h3>
-                <p>
-                  Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -224,8 +224,8 @@
 
   <!-- ======= Footer ======= -->
   <%- include('../views/includes/footer.ejs') %>
-  <!-- End Footer -->
+    <!-- End Footer -->
 
-<!-- ======= endDocument ======= -->
-<%- include('../views/includes/end.ejs') %>
-<!-- End  -->
+    <!-- ======= endDocument ======= -->
+    <%- include('../views/includes/end.ejs') %>
+      <!-- End  -->

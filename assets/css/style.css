@@ -48,6 +48,7 @@ h4 {
 --------------------------------------------------------------*/
 a {
   transition: 0.5s;
+  color: #ff7f00;
 }
 
 /* ==================================================
@@ -92,6 +93,11 @@ section {
   border-radius: 0;
   margin: 0;
   overflow: hidden;
+  height: 185px;
+}
+
+.card-img-top {
+  height: 500px;
 }
 
 a:hover {
@@ -555,11 +561,21 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /* ==================================================
-  collection Styling
+  collection book-card Styling
   ================================================== */
 .card {
   border: outset;
+  height: 750px;
 }
+
+.card-img-top {
+  height: 500px;
+}
+
+/* 
+.card-text {
+  margin-top: 80px;
+} */
 
 .card-body .btn {
   margin-left: 48px;

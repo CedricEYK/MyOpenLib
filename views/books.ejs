@@ -11,12 +11,6 @@
 
   <main id="main">
     <h1>Books from a api subject:</h1>
-    <div>
-        <form class="" method="GET" action="/bookResults">
-            <input name="search" type="text" placeholder="search by subject">
-            <input type="submit">
-        </form>
-    </div>
     <!-- section to show books -->
     <section>
      <div class="container">
@@ -32,7 +26,7 @@
                     <%= author + ', ' %>
                         <% }) %> </h6>
                   <p class="card-text"><% book.description %></p>
-                  <a href=<%= "http://www.archive.org/stream/" + book.identifier %> class="btn btn-primary">Read</a>
+                  <a href=<%= "https://www.archive.org/stream/" + book.identifier %> class="btn btn-primary">Read</a>
                 </div>
               </div>
             </div>

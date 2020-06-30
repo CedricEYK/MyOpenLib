@@ -1,5 +1,7 @@
 const request = require("request");
 
+//const getbooks = require("../models/books");
+
 exports.getHomePage = (req, res, next) => {
   res.render("index", {
     pageTitle: "AfroLib",
@@ -11,7 +13,6 @@ exports.getBookResults = (req, res, next) => {
   var searchTerm = req.query.search;
   var url = "https://openlibrary.org/subjects/" + searchTerm + ".json";
   var rawdata;
-
   var books = [];
 
   request(url, function (error, response, body) {
