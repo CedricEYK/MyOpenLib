@@ -6,8 +6,6 @@ const express = require("express");
 
 const cors = require("cors");
 
-const errorCtrl = require("./controllers/error");
-
 const path = require("path");
 
 const app = express();
@@ -15,10 +13,12 @@ const app = express();
 app.set("view engine", "ejs");
 app.set("views", "views");
 
+const errorCtrl = require("./controllers/error");
 const indexRoutes = require("./routes/index");
 const collectionRoutes = require("./routes/collection");
 
 app.use("*", cors());
+
 app.use(express.static(path.join(__dirname, "assets")));
 
 //set headers for CORS see course 365
