@@ -1,69 +1,68 @@
 /**
  *TODO: Make every collection render books based on clcName in the url
- **Controller middlewares for managing requests for the different book collection. For now it just renders a view with the two variables changing for every collection
+ **Controller middlewares for managing requests for the different book collection.
+ **The code has been modified to run asyncally but with a slight difference in how
+ **the different actions occur.
  */
-const request = require("request");
+const fetch = require("node-fetch");
 
 exports.getCollection = (req, res, next) => {
-  const clcName = req.url;
+  var collectionName = req.url;
+  var url = "https://openlibrary.org/subjects/" + collectionName + ".json";
 
-  var url = "https://openlibrary.org/subjects/" + clcName + ".json";
-  var rawdata;
-
-  var books = [];
-
-  request(url, function (error, response, body) {
-    var works = [];
-    if (!error && response.statusCode == 200) {
-      console.log("the req.params clcName: " + req.url);
-      rawdata = JSON.parse(body);
-      allworks = rawdata.works;
-
-      //console.log(allworks);
-
-      allworks.forEach((element) => {
-        var work = {
-          title: "",
-          key: "",
-          authors: [],
-          cover_id: "",
-          description: "",
-          identifier: "",
-        };
-
-        // console.log(work);
-
-        if (
-          element.availability.is_readable &&
-          element.availability.status === "open"
-        ) {
-          element.authors.forEach((author) => {
-            work.authors.push(author.name);
-          });
-          work.title = element.title.toString();
-          work.key = element.key.slice(7);
-          work.cover_id = element.cover_id;
-          work.identifier = element.availability.identifier;
-        }
-
-        works.push(work);
-
-        //console.log(works);
-      });
-
-      //console.log(works);
-
-      works.forEach((work) => {
-        if (work.title !== "") {
-          books.push(work);
-        }
-      });
+  //get data from api asyncally
+  (async () => {
+    try {
+      const response = await fetch(url);
+      const json = await response.json();
+      return json;
+    } catch (error) {
+      console.log(error);
     }
+  })()
+    .then((json) => {
+      allworks = json.works;
+      extractData();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 
-    res.render("collection", {
-      pageTitle: clcName + " Collection",
-      collectionName: clcName,
+  //manipulate raw data
+  function extractData() {
+    var availableBooks = [];
+    var extractedWorks = [];
+    var books = [];
+    for (let i in allworks) {
+      if (
+        allworks[i].availability &&
+        allworks[i].availability.is_readable &&
+        allworks[i].availability.status === "open"
+      ) {
+        availableBooks.push(allworks[i]);
+      }
+    }
+    for (let i in availableBooks) {
+      var work = {
+        title: "",
+        key: "",
+        authors: [],
+        cover_id: "",
+        identifier: "",
+      };
+      work.authors.push(availableBooks[i].authors[0].name);
+      work.title = availableBooks[i].title;
+      work.key = availableBooks[i].key;
+      work.cover_id = availableBooks[i].cover_id;
+      work.identifier = availableBooks[i].availability.identifier;
+      extractedWorks.push(work);
+    }
+    books = extractedWorks;
+    res.render("books", {
+      pageTitle: "Books",
       books: books,
     });
-  });
+    console.log(books);
+    console.log("query:" + req.query);
+  }
 };

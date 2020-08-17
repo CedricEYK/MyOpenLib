@@ -18,7 +18,7 @@ exports.getBookResults = (req, res, next) => {
   var searchTerm = req.query.searchTerm;
   var url = "https://openlibrary.org/subjects/" + searchTerm + ".json";
 
-  //get data from api asynclly
+  //get data from api asyncally
   (async () => {
     try {
       const response = await fetch(url);
